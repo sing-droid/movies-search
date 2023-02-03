@@ -15,6 +15,7 @@ import AccountCircle from '@mui/icons-material/AccountCircle';
 import MailIcon from '@mui/icons-material/Mail';
 import NotificationsIcon from '@mui/icons-material/Notifications';
 import MoreIcon from '@mui/icons-material/MoreVert';
+import { Navigate, useNavigate } from 'react-router-dom';
 
 const Search = styled('div')(({ theme }) => ({
   position: 'relative',
@@ -86,6 +87,23 @@ export default function PrimarySearchAppBar() {
     handleMobileMenuClose();
   };
 
+  const  navigate = useNavigate();
+  const navigateToTrending = () => {
+    navigate(`/trending`);
+  }
+
+  const navigateTotv = () => {
+    navigate (`/tv`);
+  }
+
+  const navigateToCelebrety = () => {
+    navigate (`/celebrety`);
+  }
+
+  const navigateToHome = () => {
+    navigate (`/`);
+  }
+
 
   const handleMobileMenuOpen = (event) => {
     setMobileMoreAnchorEl(event.currentTarget);
@@ -130,10 +148,10 @@ export default function PrimarySearchAppBar() {
       open={isdrawerOpen}
       onClose={handleDrawerClose}
     >
-      <MenuItem onClick={handleDrawerClose}>Home</MenuItem>
-      <MenuItem onClick={handleDrawerClose}>Trending</MenuItem>
-      <MenuItem onClick={handleDrawerClose}>Celebrity</MenuItem>
-      <MenuItem onClick={handleDrawerClose}>TV</MenuItem>
+      <MenuItem onClick={navigateToHome }>Home</MenuItem>
+      <MenuItem onClick={navigateToTrending}>Trending</MenuItem>
+      <MenuItem onClick={navigateToCelebrety}>Celebrity</MenuItem>
+      <MenuItem onClick={navigateTotv}>TV</MenuItem>
 
 
     </Menu>
@@ -178,6 +196,8 @@ export default function PrimarySearchAppBar() {
             variant="h6"
             noWrap
             component="div"
+            onClick={navigateToHome}
+            style = {{cursor : 'pointer'}}
             sx={{ display: { xs: 'none', sm: 'block' } }}
           >
             Movies
