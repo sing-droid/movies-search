@@ -8,7 +8,7 @@ const Trendings = () => {
         const response  = await fetch(url)
         const responsejson = await response.json()
         setTrending(responsejson.results)
-        console.log(trending)
+        // console.log(trending)
     }
     useEffect(() => {
         trendingMovieRequest()

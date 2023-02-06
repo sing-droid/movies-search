@@ -59,6 +59,7 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
 
 
 export default function PrimarySearchAppBar() {
+  const [query, setQuery] = React.useState("")
   const [anchorEl, setAnchorEl] = React.useState(null);
   const [anchorE2, setAnchorE2] = React.useState(null);
   const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = React.useState(null);
@@ -90,18 +91,32 @@ export default function PrimarySearchAppBar() {
   const  navigate = useNavigate();
   const navigateToTrending = () => {
     navigate(`/trending`);
+    setAnchorE2(null);
   }
 
   const navigateTotv = () => {
     navigate (`/tv`);
+    setAnchorE2(null);
   }
 
+  const navigateToQuery = () => {
+    navigate(`/search/${query}`);
+  }
+
+  const queryChange = (event) => {
+    event.prevent.default()
+    setQuery(event.target.value)
+    // navigate(`/search/${query}`);
+
+  }
   const navigateToCelebrety = () => {
     navigate (`/celebrety`);
+    setAnchorE2(null);
   }
 
   const navigateToHome = () => {
     navigate (`/`);
+    setAnchorE2(null);
   }
 
 
@@ -204,11 +219,17 @@ export default function PrimarySearchAppBar() {
           </Typography>
           <Search>
             <SearchIconWrapper>
-              <SearchIcon />
+              <SearchIcon/>
             </SearchIconWrapper>
             <StyledInputBase
               placeholder="Search…"
               inputProps={{ 'aria-label': 'search' }}
+              value = {query}
+              onChange={queryChange}
+              
+              
+              
+
             />
           </Search>
            <Box sx={{ flexGrow: 1 }} />

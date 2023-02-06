@@ -1,8 +1,11 @@
 import React from 'react'
+import Celebrity from '../celebrety';
 
 const  Celebrety = () => {
   return (
-    <div>celebrety</div>
+    <div>
+      <Celebrity /> 
+    </div>
   )
 }
 
