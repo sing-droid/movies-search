@@ -6,6 +6,7 @@ import Homes from './components/homes';
 import Trending from './components/pages/trending';
 import Tv from './components/pages/tv';
 import Celebrety from './components/pages/celebrety';
+import Search from './components/search';
 
 
 const  App = () => {
@@ -17,7 +18,7 @@ const  App = () => {
         <Route path = '/trending' element = {<Trending/> } />
         <Route path ='/tv' element = {<Tv/>} />
         <Route path ='/celebrety' element = {<Celebrety/>} />
-        <Route path='/search' element = {<Trending/>} /> 
+        <Route path='/search/:query' element = {<Search/>} />
         </Routes>
        
 

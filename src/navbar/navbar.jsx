@@ -99,12 +99,15 @@ export default function PrimarySearchAppBar() {
     setAnchorE2(null);
   }
 
-  const navigateToQuery = () => {
-    navigate(`/search/${query}`);
+  const navigateToQuery = (event) => {
+    if(event.keyCode === 13){  //code for check eneter button
+      setQuery("");
+      navigate(`/search/${query}`,{state : {query : query}});
+    }
   }
 
   const queryChange = (event) => {
-    event.prevent.default()
+    // event.preventdefault()
     setQuery(event.target.value)
     // navigate(`/search/${query}`);
 
@@ -226,6 +229,7 @@ export default function PrimarySearchAppBar() {
               inputProps={{ 'aria-label': 'search' }}
               value = {query}
               onChange={queryChange}
+              onKeyDown = {navigateToQuery}
               
               
               
