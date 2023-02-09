@@ -11,7 +11,7 @@ import MovieList from "../movieList";
         const response = await fetch(url)
         const responsejson = await response.json()
         setMovies(responsejson.results)
-        // console.log(movies)
+        console.log(movies)
 
     }
     useEffect(()=> {

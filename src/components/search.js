@@ -1,10 +1,11 @@
 import React from 'react'
-import Search from './searchList'
+import SearchList from './searchList';
 
-export default function Search() {
+ const Search=() =>{
   return (
     <div>
-        <Search/>
+        <SearchList/>
     </div>
   )
 }
+export default Search;
