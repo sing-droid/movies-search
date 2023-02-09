@@ -2,7 +2,7 @@ import React, {  useEffect, useState } from "react";
 import { useLocation, useParams } from "react-router-dom";
 import MovieList from "./movieList";
 
-const Search = () => {
+const SearchList = () => {
     const [search, setSearch] = useState([]);
     const location = useLocation()
     const {query} = location.state;
@@ -23,4 +23,4 @@ const Search = () => {
     </div>
  )
 }
-export default Search;
+export default SearchList;
