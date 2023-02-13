@@ -21,7 +21,7 @@ import MovieList from "../movieList";
     return (
         <div>
             
-            <MovieList movies = {movies} />
+            <MovieList movies = {movies} type = {"home"} />
         </div>
     )
 }

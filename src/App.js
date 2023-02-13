@@ -7,7 +7,9 @@ import Trending from './components/pages/trending';
 import Tv from './components/pages/tv';
 import Celebrety from './components/pages/celebrety';
 import Search from './components/search';
-import { Description } from '@mui/icons-material';
+import Description from './components/description';
+import TvDescription from './components/tvDescription';
+import CelebDescription from './components/celebDescription';
 
 
 const  App = () => {
@@ -20,7 +22,9 @@ const  App = () => {
         <Route path ='/tv' element = {<Tv />} />
         <Route path ='/celebrety' element = {<Celebrety/>} />
         <Route path='/search/:query' element = {<Search/>} />
-        <Route path='/description/ : id' element = {<Description/>}/>
+        <Route path='/description/home/:id' element = {<Description/>}/>
+        <Route path='/description/tv/:id' element = {<TvDescription/>}/>
+        <Route path='/description/celebrity/:id' element = {<CelebDescription/>}/>
         </Routes>
        
 

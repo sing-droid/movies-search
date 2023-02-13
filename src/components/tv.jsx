@@ -18,7 +18,7 @@ const Tvs = () => {
     )
     return (
         <div>
-            <MovieList movies = {tv} />
+            <MovieList movies = {tv} type = {"tv"}/>
         </div>
     )
 }

@@ -16,7 +16,7 @@ const Celebrity = () => {
     )
     return (
         <div>
-            <CelebrityList movies = {celebrity} />
+            <CelebrityList movies = {celebrity} type = {"celebrety"}/>
         </div>
     )
 }

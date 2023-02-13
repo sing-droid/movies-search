@@ -1,9 +1,10 @@
 import React from 'react'
+import Descriptions from './descriptions';
 
-function Description() {
+const Description=()=>{
   return (
     <div>
-
+      <Descriptions/>
     </div>
   )
 }

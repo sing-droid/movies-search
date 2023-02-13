@@ -16,7 +16,7 @@ const Trendings = () => {
  )
  return (
     <div>
-        <MovieList movies ={trending} />
+        <MovieList movies ={trending} type = {"trending"}/>
     </div>
  )
 }

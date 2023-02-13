@@ -2,8 +2,8 @@ import React from 'react'
 import Home from './pages/home';
 
 
- const  Homes = ()=>  {
-
+ const  Homes = ()=>  {   //key to be used = name, poster-path, overview , popularity
+ 
   return (
     <div>
         <Home />
